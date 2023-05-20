@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "948626058105",
+    "firebase_url": "https://kati-aaa2d-default-rtdb.firebaseio.com",
+    "project_id": "kati-aaa2d",
+    "storage_bucket": "kati-aaa2d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948626058105:android:b694b668be409f38401da8",
+        "android_client_info": {
+          "package_name": "com.kati"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948626058105-3t885pot6dilbum8hkdfr7nf8qql8tcs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByvUE8U0upmqqOe1qx2wYq9dbSIPIF_OQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "948626058105-3t885pot6dilbum8hkdfr7nf8qql8tcs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

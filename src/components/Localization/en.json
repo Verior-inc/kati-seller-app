@@ -1,0 +1,126 @@
+{
+  "login": {
+    "title": "Welcome Back!",
+    "description": "Sign in to your account. If you havn`t created one. visit our web",
+    "email": "Email address",
+    "password": "Password",
+    "button": "Continue",
+    "facebook": "Continue with Facebook ",
+    "google": "Continue with Google ",
+    "apple": "Continue with Apple "
+  },
+  "home": {
+    "Home": "Home",
+    "Booking info": "Booking info",
+    "Booking Completed": "Booking Completed",
+    "Active Booking": "Active Booking",
+    "Booking Cancelled": "Booking Cancelled",
+    "Your Responce": "Your Responce",
+    "Responce rate": "Responce rate",
+    "Coustumer`s responce": "Coustumer`s responce",
+    "reviews": "Reviews",
+    "Earnings": "Earnings",
+    "Income Earned": "Income Earned",
+    "Income Pending": "Income Pending",
+    "Income Cancelled": "Income Cancelled",
+    "Profile Statics ": "Profile Statics",
+    "Profile Views": "Profile Views"
+  },
+  "Chat": {
+    "Chat": "Chat"
+  },
+  "order": {
+    "Heading": "Bookings",
+    "Filter by": "Filter by",
+    "Active Order": "Active Order",
+    "Completed Orders": "Completed order",
+    "Cancelled": "Cancelled Order",
+
+    "Ordered By": "Ordered By",
+    "Delivery": "Delivery",
+    "Total hours": "hours",
+    "Total Payment": "Total Payment",
+    "button": "View Details"
+  },
+  "Notification": {
+    " Heading": "Notifications",
+    "Mark": "Mark all as read"
+  },
+  "profile": {
+    "Heading": "Account overview",
+    "1st tab": "Buyers request",
+    "2nd tab": "Payment",
+    "3nd tab": "Earnings",
+    "4nd tab": "My gigs",
+    "5nd tab": "Settings",
+    "Buyers request": {
+      "Heading": "BUYERS REQUEST",
+      "booking id": "Booking id",
+      "date": "Date",
+      "time": "Time",
+      "button": "View Details"
+    },
+    "payment": {
+      "Heading": "PAYMENT",
+      "income earned": "Income Earned",
+      "income Pending": "Income Pending",
+      "ques": "Haven`t you connected your bank account yet ?",
+      "button": "Connect"
+    },
+    "Earnings": {
+      "Heading": "EARNINGS",
+      "Monthly Analysis": "Monthly Analysis"
+    },
+    "settings": {
+      "Heading": "SETTINGS",
+      "1st tab": "Edit profile",
+      "2st tab": "Notification",
+      "3st tab": "Password and security",
+      "4st tab": "Location",
+
+      "edit profile": {
+        "Heading": "EDIT PROFILE",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone No",
+        "Categories": "Categories",
+        "date of birth": "Date of Birth(DOB)"
+      },
+      "Notification": {
+        "Heading": "NOTIFICATION",
+        "1st switch": "Notification Sound",
+        "2st switch": "Would you like to turn off your notification ?",
+        "3st switch": "Show notification in notification bar ?"
+      },
+      "Password and security": {
+        "Heading": "PASSWORD AND SECURITY",
+        "Current Password": "Current Password",
+        "New Password": "New Password",
+        " Passcode": "passcode"
+      },
+      "Location": {
+        "heading": "LOCATION"
+      }
+    }
+  },
+
+  "card": {
+    "Booking details card": {
+      "Heading": "Booking details"
+    },
+    "Booking Requirements": {
+      "Heading": "Booking Requirements",
+      "button Reschedule": "Reschedule",
+      "button Deliver now": "Deliver now"
+    },
+    "Booking details Profile": {
+      "heading": "Booking Details",
+      "button 1": "Talk with buyer",
+      "button 2": "Accept request"
+    },
+    "": {}
+  },
+  "common": {
+    "save button": "Save Changes"
+  }
+}

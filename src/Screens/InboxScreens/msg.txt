@@ -1,0 +1,631 @@
+import React, {useState, useRef, useEffect} from 'react';
+import {
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  useColorScheme,
+  View,
+  Button,
+  TouchableOpacity,
+  Image,
+  ImageBackground,
+  KeyboardAvoidingView,
+  Platform,
+  TextInput,
+  Keyboard,
+  BackHandler,
+} from 'react-native';
+// import {TextInput} from 'react-native-paper';
+import AudioCircle from '../../../assets/AudioCircle.svg';
+import Fontisto from 'react-native-vector-icons/Fontisto';
+import MaterialCommunityIcons from 'react-native-vector-icons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import {useIsFocused} from '@react-navigation/native';
+
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import {HeadingName} from './MsgSenderName';
+
+const MsgScreen = props => {
+  const [msg, setMsg] = useState('');
+
+  return (
+    <KeyboardAwareScrollView
+      scrollEnabled={true}
+      enableAutomaticScroll
+      enableOnAndroid
+      keyboardShouldPersistTaps="handled"
+      contentContainerStyle={{
+        flex: 1,
+        backgroundColor: '#F9F9F9',
+      }}>
+      <StatusBar
+        translucent={true}
+        backgroundColor={'transparent'}
+        barStyle={'dark-content'}
+      />
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: '#F9F9F9',
+          justifyContent: 'flex-start',
+          marginTop: hp('2'),
+        }}>
+        <HeadingName />
+        <View style={{flexDirection: 'row'}}>
+          <Image
+            source={require('../../../assets/Profile.png')}
+            style={{
+              borderRadius: wp('100'),
+              height: hp('5.5'),
+              width: wp('11.5'),
+
+              marginTop: hp('15'),
+              marginLeft: wp('6'),
+              marginRight: wp('2'),
+            }}
+          />
+          <View
+            style={{
+              backgroundColor: '#FFFFFF',
+              width: wp('60'),
+
+              marginTop: hp('4'),
+              borderWidth: wp('0.1'),
+              borderColor: 'grey',
+              borderRadius: wp('2'),
+            }}>
+            <Text
+              style={{
+                marginTop: hp('1'),
+                fontSize: 15,
+                color: 'black',
+                width: '90%',
+
+                marginLeft: hp('2'),
+                fontFamily: 'FilsonProRegular-Regular',
+              }}>
+              it is a long time establisment fact that a reader will be
+              distracted by the readable contant of the page when looking out on
+              page of lorem ipsum is that it has more or less
+            </Text>
+          </View>
+        </View>
+        <Text
+          style={{
+            fontSize: 12,
+            color: '#B7B7B7',
+            alignSelf: 'flex-start',
+            marginLeft: hp('10'),
+            marginTop: hp('1'),
+            fontFamily: 'FilsonProRegular-Regular',
+          }}>
+          22:33
+        </Text>
+        <View
+          style={{
+            backgroundColor: '#B7B7B7',
+            width: wp('60'),
+
+            marginLeft: wp('34'),
+            marginTop: hp('1'),
+            borderWidth: wp('0.1'),
+            borderColor: 'grey',
+            borderRadius: wp('2'),
+            height: hp('8'),
+            alignSelf: 'flex-start',
+          }}>
+          <Text
+            style={{
+              marginTop: hp('1'),
+              fontSize: 15,
+
+              marginLeft: wp('4'),
+              color: 'black',
+              fontFamily: 'FilsonProRegular-Regular',
+            }}>
+            i guess i have Booked Wrongly !!
+          </Text>
+        </View>
+        <View style={{marginLeft: wp('83'), marginTop: wp('0')}}>
+          <Text style={{color: '#B7B7B7', marginTop: hp('1')}}>22:33</Text>
+        </View>
+        <View style={{position: 'absolute', bottom: 0}}>
+          <View
+            style={{
+              height: hp('15'),
+              width: wp('100'),
+              backgroundColor: '#F9F9F9',
+              marginTop: Platform.OS == 'ios' ? hp('46') : hp('50'),
+              flexDirection: 'row',
+            }}>
+            <Fontisto
+              name="camera"
+              size={hp('3')}
+              color={'black'}
+              style={{
+                alignSelf: 'flex-start',
+                marginLeft: hp('2'),
+                marginTop: hp('1'),
+              }}
+            />
+
+            <Image
+              source={require('../../../assets/app-store.png')}
+              style={{
+                height: hp('3.5'),
+                alignSelf: 'flex-start',
+                marginLeft: hp('2'),
+                width: hp('3.5'),
+                marginTop: hp('1'),
+              }}
+            />
+            <View
+              style={{
+                width: wp('10%'),
+                backgroundColor: '#F9F9F9',
+                height: hp('3'),
+                flexDirection: 'row',
+              }}>
+              <View
+                style={{
+                  marginLeft: hp('2'),
+                  height: hp('5'),
+                  borderWidth: 0.3,
+                  backgroundColor: '#F9F9F9',
+                  borderRadius: 20,
+                  width: hp('32'),
+                }}>
+                <TextInput
+                  // onKeyPress={({nativeEvent}) => {
+                  //   if (nativeEvent === 'Backspace') {
+                  //     Keyboard.dismiss();
+                  //     InputRef.blur();
+                  //   }
+                  // }}
+                  // ref={InputRef}
+
+                  placeholder="To : Company Name"
+                  placeholderTextColor={'black'}
+                  value={msg}
+                  onChangeText={val => {
+                    setMsg(val);
+                  }}
+                  style={{
+                    paddingTop: hp('1'),
+                    width: hp('28'),
+
+                    paddingLeft: hp('2'),
+                  }}
+                />
+              </View>
+              <View
+                style={{
+                  height: hp('5'),
+                  marginLeft: hp('-4'),
+                  marginTop: hp('0.5'),
+                }}>
+                {msg !== '' ? (
+                  <Ionicons
+                    name="send"
+                    size={hp('2.5')}
+                    color={'#00a2ed'}
+                    style={{marginTop: hp('0.7')}}
+                  />
+                ) : null}
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </KeyboardAwareScrollView>
+  );
+};
+
+export default MsgScreen;
+
+//  <View
+//    style={{
+//      flexDirection: 'row',
+
+//      height: hp('10'),
+
+//      marginTop: hp('40'),
+//    }}>
+//    <FontAwesome5
+//      name="camera"
+//      size={hp('2.9')}
+//      color={'black'}
+//      style={{alignSelf: 'center', marginLeft: hp('2')}}
+//    />
+//    <Image
+//      source={require('../../../assets/app-store.png')}
+//      style={{
+//        height: hp('2.5'),
+//        alignSelf: 'center',
+//        marginLeft: hp('2'),
+//        width: hp('3'),
+//      }}
+//    />
+
+//    {/* <TextInput
+//             placeholder="To: Company Name"
+//             right={<TextInput.Icon name="camera" />}
+//             underlineColor={'transparent'}
+//             activeUnderlineColor={'transparent'}
+//             style={{
+//               alignSelf: 'center',
+//               height: hp('4.5'),
+//               backgroundColor: '#FFFFFF',
+//               borderWidth: 0.2,
+//               borderColor: '#B7B7B7',
+//               borderRadius: 100,
+//               borderTopLeftRadius: 100,
+//               borderTopEndRadius: 100,
+//               marginLeft: hp('1'),
+
+//               width: hp('33'),
+//               // paddingLeft: hp('2'),
+//             }}
+//           /> */}
+//  </View>;
+
+
+\\\\\\\\\\\
+
+
+ <View
+        style={{
+          flex: 1,
+          backgroundColor: '#F9F9F9',
+          marginTop: hp('2'),
+        }}>
+        <StatusBar
+          translucent={true}
+          backgroundColor={'transparent'}
+          barStyle={'dark-content'}
+        />
+
+        <HeadingName />
+        <View style={{flexDirection: 'row'}}>
+          <Image
+            source={require('../../../assets/Profile.png')}
+            style={{
+              borderRadius: wp('100'),
+              height: hp('5.5'),
+              width: wp('11.5'),
+
+              marginTop: hp('15'),
+              marginLeft: wp('6'),
+              marginRight: wp('2'),
+            }}
+          />
+          <View
+            style={{
+              backgroundColor: '#FFFFFF',
+              width: wp('60'),
+
+              marginTop: hp('4'),
+              borderWidth: wp('0.1'),
+              borderColor: 'grey',
+              borderRadius: wp('2'),
+            }}>
+            <Text
+              style={{
+                marginTop: hp('1'),
+                fontSize: 15,
+                color: 'black',
+                width: '90%',
+
+                marginLeft: hp('2'),
+                fontFamily: 'FilsonProRegular-Regular',
+              }}>
+              it is a long time establisment fact that a reader will be
+              distracted by the readable contant of the page when looking out on
+              page of lorem ipsum is that it has more or less
+            </Text>
+          </View>
+        </View>
+        <Text
+          style={{
+            fontSize: 12,
+            color: '#B7B7B7',
+            alignSelf: 'flex-start',
+            marginLeft: hp('10'),
+            marginTop: hp('1'),
+            fontFamily: 'FilsonProRegular-Regular',
+          }}>
+          22:33
+        </Text>
+        <View
+          style={{
+            backgroundColor: '#B7B7B7',
+            width: wp('60'),
+
+            marginLeft: wp('34'),
+            marginTop: hp('1'),
+            borderWidth: wp('0.1'),
+            borderColor: 'grey',
+            borderRadius: wp('2'),
+            height: hp('8'),
+            alignSelf: 'flex-start',
+          }}>
+          <Text
+            style={{
+              marginTop: hp('1'),
+              fontSize: 15,
+
+              marginLeft: wp('4'),
+              color: 'black',
+              fontFamily: 'FilsonProRegular-Regular',
+            }}>
+            i guess i have Booked Wrongly !!
+          </Text>
+        </View>
+        <View style={{marginLeft: wp('83'), marginTop: wp('0')}}>
+          <Text style={{color: '#B7B7B7', marginTop: hp('1')}}>22:33</Text>
+        </View>
+        <View style={{position: 'absolute', bottom: 20}}>
+          <View
+            style={{
+              width: wp('100'),
+              backgroundColor: '#F9F9F9',
+
+              flexDirection: 'row',
+            }}>
+            <Fontisto
+              name="camera"
+              size={hp('3')}
+              color={'black'}
+              style={{
+                alignSelf: 'flex-start',
+                marginLeft: hp('2'),
+                marginTop: hp('1'),
+              }}
+            />
+
+            <Image
+              source={require('../../../assets/app-store.png')}
+              style={{
+                height: hp('3.5'),
+                alignSelf: 'flex-start',
+                marginLeft: hp('2'),
+                width: hp('3.5'),
+                marginTop: hp('1'),
+              }}
+            />
+            <View
+              style={{
+                width: wp('10%'),
+                backgroundColor: '#F9F9F9',
+                height: hp('3'),
+                flexDirection: 'row',
+              }}>
+              <View
+                style={{
+                  marginLeft: hp('2'),
+                  height: hp('5'),
+                  borderWidth: 0.3,
+                  backgroundColor: '#F9F9F9',
+                  borderRadius: 20,
+                  width: hp('32'),
+                }}>
+                <TextInput
+                  // onKeyPress={({nativeEvent}) => {
+                  //   if (nativeEvent === 'Backspace') {
+                  //     Keyboard.dismiss();
+                  //     InputRef.blur();
+                  //   }
+                  // }}
+                  // ref={InputRef}
+
+                  placeholder="To : Company Name"
+                  placeholderTextColor={'black'}
+                  value={msg}
+                  onChangeText={val => {
+                    setMsg(val);
+                  }}
+                  style={{
+                    paddingTop: hp('1'),
+                    width: hp('28'),
+
+                    paddingLeft: hp('2'),
+                  }}
+                />
+              </View>
+              <View
+                style={{
+                  height: hp('5'),
+                  marginLeft: hp('-4'),
+                  marginTop: hp('0.5'),
+                }}>
+                {msg !== '' ? (
+                  <Ionicons
+                    name="send"
+                    size={hp('2.5')}
+                    color={'#00a2ed'}
+                    style={{marginTop: hp('0.7')}}
+                  />
+                ) : null}
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+
+      \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+      <View style={{flexDirection: 'row', marginTop: hp('1')}}>
+          <Image
+            source={require('../../../assets/Profile.png')}
+            style={{
+              borderRadius: wp('100'),
+              height: hp('5.5'),
+              width: wp('11.5'),
+
+              marginTop: hp('15'),
+              marginLeft: wp('6'),
+              marginRight: wp('2'),
+            }}
+          />
+          <View
+            style={{
+              backgroundColor: '#FFFFFF',
+              width: wp('60'),
+
+              marginTop: hp('4'),
+              borderWidth: wp('0.1'),
+              borderColor: 'grey',
+              borderRadius: wp('2'),
+            }}>
+            <Text
+              style={{
+                marginTop: hp('1'),
+                fontSize: 15,
+                color: 'black',
+                width: '90%',
+
+                marginLeft: hp('2'),
+                fontFamily: 'FilsonProRegular-Regular',
+              }}>
+              it is a long time establisment fact that a reader will be
+              distracted by the readable contant of the page when looking out on
+              page of lorem ipsum is that it has more or less
+            </Text>
+          </View>
+        </View>
+        <Text
+          style={{
+            fontSize: 12,
+            color: '#B7B7B7',
+            alignSelf: 'flex-start',
+            marginLeft: hp('10'),
+            marginTop: hp('1'),
+            fontFamily: 'FilsonProRegular-Regular',
+          }}>
+          22:33
+        </Text>
+        <View
+          style={{
+            backgroundColor: '#B7B7B7',
+            width: wp('60'),
+
+            marginLeft: wp('34'),
+            marginTop: hp('1'),
+            borderWidth: wp('0.1'),
+            borderColor: 'grey',
+            borderRadius: wp('2'),
+            height: hp('8'),
+            alignSelf: 'flex-start',
+          }}>
+          <Text
+            style={{
+              marginTop: hp('1'),
+              fontSize: 15,
+
+              marginLeft: wp('4'),
+              color: 'black',
+              fontFamily: 'FilsonProRegular-Regular',
+            }}>
+            i guess i have Booked Wrongly !!
+          </Text>
+        </View>
+
+        <View style={{marginLeft: wp('83'), marginTop: wp('0')}}>
+          <Text style={{color: '#B7B7B7', marginTop: hp('1')}}>22:33</Text>
+        </View>
+
+
+
+
+        \\\\\\\\\\
+
+
+            <View style={{position: 'absolute', bottom: 20}}>
+          <View
+            style={{
+              backgroundColor: '#F9F9F9',
+
+            }}>
+            <Fontisto
+              name="camera"
+              size={hp('3')}
+              color={'black'}
+              style={{
+                alignSelf: 'flex-start',
+                marginLeft: hp('2'),
+                marginTop: hp('1'),
+              }}
+            />
+
+            <Image
+              source={require('../../../assets/app-store.png')}
+              style={{
+                height: hp('3.5'),
+                alignSelf: 'flex-start',
+                marginLeft: hp('2'),
+                width: hp('3.5'),
+                marginTop: hp('1'),
+              }}
+            />
+            <View
+              style={{
+                width: wp('10%'),
+                backgroundColor: '#F9F9F9',
+                height: hp('3'),
+                flexDirection: 'row',
+              }}>
+              <View
+                style={{
+                  marginLeft: hp('2'),
+                  height: hp('5'),
+                  borderWidth: 0.3,
+                  backgroundColor: '#F9F9F9',
+                  borderRadius: 20,
+                  width: hp('32'),
+                }}>
+                <TextInput
+                  // onKeyPress={({nativeEvent}) => {
+                  //   if (nativeEvent === 'Backspace') {
+                  //     Keyboard.dismiss();
+                  //     InputRef.blur();
+                  //   }
+                  // }}
+                  // ref={InputRef}
+
+                  placeholder="To : Company Name"
+                  placeholderTextColor={'black'}
+                  value={msg}
+                  onChangeText={val => {
+                    setMsg(val);
+                  }}
+                  style={{
+                    paddingTop: hp('1'),
+                    width: hp('28'),
+
+                    paddingLeft: hp('2'),
+                  }}
+                />
+              </View>
+              <View
+                style={{
+                  height: hp('5'),
+                  marginLeft: hp('-4'),
+                  marginTop: hp('0.5'),
+                }}>
+                {msg !== '' ? (
+                  <Ionicons
+                    name="send"
+                    size={hp('2.5')}
+                    color={'#00a2ed'}
+                    style={{marginTop: hp('0.7')}}
+                  />
+                ) : null}
+              </View>
+            </View>
+          </View>
+        </View>

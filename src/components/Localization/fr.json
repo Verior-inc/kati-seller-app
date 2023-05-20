@@ -1,0 +1,126 @@
+{
+  "login": {
+    "title": "Content de te revoir!",
+    "description": "Connectez-vous à votre compte. Si vous n'en avez pas créé. visitez notre site",
+    "email": "Adresse e-mail",
+    "password": "Mot de passe",
+    "button": "Continuer",
+    "facebook": "Continuer avec Facebook ",
+    "google": "Continuer avec Google ",
+    "apple": "Continuer avec Apple "
+  },
+  "home": {
+    "Home": "Maison",
+    "Booking info": "Informations de réservation",
+    "Booking Completed": "Réservation terminée",
+    "Active Booking": "Réservation active",
+    "Booking Cancelled": "Réservation annulée",
+    "Your Responce": "Votre réponse",
+    "Responce rate": "Taux de réponse",
+    "Coustumer`s responce": "Réponse du client",
+    "reviews": "Commentaires",
+    "Earnings": "Gains",
+    "Income Earned": "Revenu gagné",
+    "Income Pending": "Revenu en attente",
+    "Income Cancelled": "Revenu annulé",
+    "Profile Statics ": "Statique du profil",
+    "Profile Views": "Vues du profil"
+  },
+  "Chat": {
+    "Chat": "Discuter"
+  },
+  "order": {
+    "Heading": "Réservations",
+    "Filter by": "Filtrer par",
+    "Active Order": "Commande active",
+    "Completed Orders": "Commande terminée",
+    "Cancelled": "Commande annulée",
+
+    "Ordered By": "Commander par",
+    "Delivery": "Livraison",
+    "Total hours": "total heures",
+    "Total Payment": "Total Paiement",
+    "button": "Voir les détails"
+  },
+  "Notification": {
+    " Heading": "Avis",
+    "Mark": "tout marquer comme lu"
+  },
+  "profile": {
+    "Heading": "Aperçu du compte",
+    "1st tab": "Demande des acheteurs",
+    "2nd tab": "Paiement",
+    "3nd tab": "Gains",
+    "4nd tab": "Mes concerts",
+    "5nd tab": "Réglages",
+    "Buyers request": {
+      "Heading": "DEMANDE DES ACHETEURS",
+      "booking id": "Identifiant de réservation",
+      "date": "Date",
+      "time": "Temps",
+      "button": "Voir les détails"
+    },
+    "payment": {
+      "Heading": "PAIEMENT",
+      "income earned": "Revenu gagné",
+      "income Pending": "Revenu en attente",
+      "ques": "Vous n'avez pas encore connecté votre compte bancaire?",
+      "button": "Relier"
+    },
+    "Earnings": {
+      "Heading": "GAINS",
+      "Monthly Analysis": "Analyse mensuelle"
+    },
+    "settings": {
+      "Heading": "RÉGLAGES",
+      "1st tab": "Editer le profil",
+      "2st tab": "Notification",
+      "3st tab": "Mot de passe et sécurité",
+      "4st tab": "Emplacement",
+
+      "edit profile": {
+        "Heading": "EDITER LE PROFIL",
+        "name": "Nom",
+        "email": "E-mail",
+        "phone": "Pas de téléphone",
+        "Categories": "Catégories",
+        "date of birth": "Date de naissance(DDN)"
+      },
+      "Notification": {
+        "Heading": "NOTIFICATION",
+        "1st switch": "Son de notification",
+        "2st switch": "Souhaitez-vous désactiver votre notification?",
+        "3st switch": "Afficher la notification dans la barre de notification?"
+      },
+      "Password and security": {
+        "Heading": "MOT DE PASSE ET SÉCURITÉ",
+        "Current Password": "Mot de passe actuel",
+        "New Password": "nouveau mot de passe",
+        "Passcode": "mot de passe"
+      },
+      "Location": {
+        "heading": "EMPLACEMENT"
+      }
+    }
+  },
+
+  "card": {
+    "Booking details card": {
+      "Heading": "Les détails de réservation"
+    },
+    "Booking Requirements": {
+      "Heading": "Conditions de réservation",
+      "button Reschedule": "Reprogrammer",
+      "button Deliver now": "Livrez maintenant"
+    },
+    "Booking details Profile": {
+      "heading": "Les détails de réservation",
+      "button 1": "Parlez avec l'acheteur",
+      "button 2": "Accepter la requête"
+    },
+    "": {}
+  },
+  "common": {
+    "save button": "Sauvegarder les modifications"
+  }
+}
